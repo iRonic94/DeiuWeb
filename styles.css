@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -416,4 +416,22 @@ section {
     .box3 {
         width: 90%;
     }
+}
+
+.scroll-button {
+    display: none;
+    position: fixed;
+    font-size: 2.1rem;
+    border: 1px solid black;
+    box-shadow: 0px 0px 1px 1px #75757552;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 20px;
+    background-color: white;
+    margin: 0 60px;
+    box-shadow: 0px 0px 5px 2px #75757552;
 }
