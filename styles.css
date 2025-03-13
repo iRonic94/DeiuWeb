@@ -38,23 +38,33 @@ section {
 nav {
     position: sticky;
     display: flex;
-    justify-content: center;
     width: 100%;
-    background-color: white;
-    z-index: 99999;
-    box-shadow: 0 0 20px 0px #0000007a;
+    background-color: #1B1A23;
+    box-shadow: 0 0 20px 14px #0000007a;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 50px;
+    align-items: center;
+
+    & :hover:not(:first-child) {
+        border-bottom: 1px solid #aacdaadb;
+    }
 }
 
 nav a {
-    color: #9d9d9d;
+    color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
+}
+
+.logo {
+    background: url("./images/logo.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
 }
 
 /*====*/
