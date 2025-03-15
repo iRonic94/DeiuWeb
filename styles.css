@@ -30,7 +30,7 @@ body {
 }
 
 section {
-    padding: 60px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -82,16 +82,20 @@ nav a {
 
 /*home section*/
 #home {
-    background: #f0f0f0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 40vh;
-    background-image: url("./images/robotWP.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+#home img {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #00000061;
+    z-index: -1;
+    filter: blur(10px);
+    width: 100%;
+    height: 45vh;
 }
 
 .presentation-text {
@@ -99,7 +103,6 @@ nav a {
     color: white;
     font-weight: bold;
     text-shadow: 0px 0px 10px #031c09;
-    background-color: #00000038;
     border-radius: 10px;
     padding: 5px;
 }
@@ -178,15 +181,15 @@ nav a {
     color: white;
 }
 
-/* .slider-show {
+.slider-show {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.slider-logo {
+/* .slider-logo {
     animation: scroll 5s linear infinite;
-}
+} */
 
 .slider-track {
     display: flex;
@@ -198,20 +201,22 @@ nav a {
 
 @keyframes scroll {
     from {
-        transform: translateX(50%);
+        transform: translateX(0%);
     }
 
     to {
-        transform: translateX(-1000%);
+        transform: translateX(-100%);
     }
-} */
+}
+
+#img-logo {
+    border-radius: 5px;
+}
 
 /*====*/
 
 /*portofolio section*/
-#portofolio {
-    background-color: #f5f5f5;
-}
+
 
 #img-robot {
     width: 400px;
@@ -264,7 +269,73 @@ nav a {
     opacity: 1;
 }
 
+.confidential {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#confidential-text {
+    width: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 2px #0a0a0a1a;
+    border-radius: 10px;
+}
+
 /*====*/
+
+/*team section*/
+
+#team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.logo-employee1 {
+    background: url(./images/employee1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.logo-chisti {
+    background: url(./images/chisti.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.team-description {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e1dcdc;
+    width: 300px;
+    height: 300px;
+    padding: 0px 0px 10px 0px;
+    box-shadow: 0px 0px 9px 6px #0000000d;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.employee-description {
+    display: flex;
+    padding: 10px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
