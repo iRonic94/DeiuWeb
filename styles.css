@@ -1,7 +1,6 @@
 /* Global Styles */
 
 body {
-
     font-family: 'FigtreeVF', 'Lettertype';
     margin: 0;
     padding: 0;
@@ -54,7 +53,7 @@ nav {
     box-shadow: 0 0 20px 14px #0000007a;
 }
 
-nav ul {
+#nav-menu {
     list-style: none;
     display: flex;
     gap: 50px;
@@ -78,6 +77,23 @@ nav a {
     height: 50px;
 }
 
+#nav-translate {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 15px;
+    right: 0;
+    position: absolute;
+}
+
+#nav-translate img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 /*====*/
 
 /*home section*/
@@ -93,7 +109,7 @@ nav a {
     border-radius: 10px;
     box-shadow: 0px 0px 3px #00000061;
     z-index: -1;
-    filter: blur(10px);
+    filter: blur(5px);
     width: 100%;
     height: 45vh;
 }
@@ -106,6 +122,8 @@ nav a {
     border-radius: 10px;
     padding: 5px;
 }
+
+
 
 /*====*/
 
@@ -345,7 +363,6 @@ nav a {
     }
 
     #home {
-        height: 60vh;
         background-size: contain;
     }
 
@@ -357,6 +374,10 @@ nav a {
     #description {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .img-description img {
+        width: 80%;
     }
 
     #about-img {
@@ -376,6 +397,35 @@ nav a {
 
     .services-box {
         width: 90%;
+    }
+
+    #confidential-text {
+        width: 100%;
+    }
+
+    #team {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        background-color: #f5f5f5;
+        justify-items: center;
+    }
+
+    .team-description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid #e1dcdc;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: white;
+        gap: 5px;
+    }
+
+    .logo-employee1,
+    .logo-chisti {
+        width: 100px;
+        height: 100px;
     }
 }
 

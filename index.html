@@ -6,33 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Industrial Robots Presentation</title>
     <link rel="stylesheet" href="styles.css">
+
     <script src="script.js"></script>
-    <link href="../demo2/css/fontawesome.css" rel="stylesheet" />
-    <link href="../demo2/css/brands.css" rel="stylesheet" />
-    <link href="../demo2/css/solid.css" rel="stylesheet" />
+    <link href="./css/fontawesome.css" rel="stylesheet" />
+    <link href="./css/brands.css" rel="stylesheet" />
+    <link href="./css/solid.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+
+
     <!-- Navigation Bar -->
+
     <nav>
-        <ul>
+        <ul id="nav-menu">
             <div class="logo"></div>
             <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
             <!-- <li><a href="#portofolio"><i class="fa-solid fa-diagram-project"></i> Projects</a></li> -->
             <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a></li>
+
+        </ul>
+        <ul id="nav-translate">
+            <div id="google_translate_element"></div>
+            <!-- <img src="./images/en.jpg">
+            <img src="./images/ro.jpg"> -->
         </ul>
     </nav>
 
     <!-- Home Section -->
+
     <section id="home">
-        <img id="img-robot" src="images/robotWP.png">
+        <img src="images/robotWP.png">
         <div class="presentation-text"><span class="letter-logo-size">Z</span>yraxes <span
                 class="letter-logo-size">I</span>ndustrial <span class="letter-logo-size">R</span>obotics & <span
                 class="letter-logo-size">A</span>utomation</div>
     </section>
     <!-- Services section -->
+    <div id="gt-mordadam-43217984"></div>
+
     <section id="services">
+
         <div class="services-box">
             <h2><i class="fa-solid fa-laptop-code"></i></h2>
             <h2>Industrial Robot/PLC Programming</h2>
@@ -203,6 +217,16 @@
         </div> -->
     </section>
     <div class="scroll-button"><i class="fa-solid fa-arrow-up"></i></div>
+
+
+    <script type="text/javascript">
+        //google translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ro,en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
