@@ -26,7 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function onclick() {
         const button = document.querySelector('.scroll-button');
-        button.addEventListener('click', topFunction);
+        if (button) {
+            button.addEventListener('click', topFunction);
+        }
     }
 
     //animation slide left-right and right-left content
@@ -42,11 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     };
-
     // Run check on scroll
     window.addEventListener("scroll", checkVisibility);
+
+
     //call the functions
     navigation();
     windowScroll();
     onclick();
-})
+});
