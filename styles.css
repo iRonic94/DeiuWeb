@@ -1,7 +1,7 @@
 /* Global Styles */
 
 body {
-    font-family: 'FigtreeVF', 'Lettertype';
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
@@ -25,12 +25,12 @@ body {
     bottom: 20px;
     background-color: white;
     margin: 0 60px;
-    box-shadow: 0px 0px 5px 2px #75757552;
 }
 
 section {
     padding: 20px 20px;
     text-align: center;
+    color: #062D27;
 }
 
 .line-height25px {
@@ -38,8 +38,8 @@ section {
 }
 
 .letter-logo-size {
-    color: #037b03;
-    font-size: 5.4rem;
+    color: #10a585;
+    font-size: 8.2rem;
 }
 
 /*====*/
@@ -50,7 +50,8 @@ nav {
     display: flex;
     width: 100%;
     background-color: #000000;
-    box-shadow: 0 0 20px 14px #0000007a;
+    background: linear-gradient(to left, #000 0%, #138575 100%);
+    box-shadow: 0 0 4px 1px #0000007a;
 }
 
 #nav-menu {
@@ -71,7 +72,7 @@ nav a {
 }
 
 .logo {
-    background: url("./images/logoblack.jpg");
+    background: url("./images/logoblacknobg.png");
     background-size: cover;
     width: 50px;
     height: 50px;
@@ -104,21 +105,18 @@ nav a {
     height: 40vh;
 }
 
-#home img {
+#home video {
     position: absolute;
     border-radius: 10px;
     box-shadow: 0px 0px 3px #00000061;
-    z-index: -1;
-    filter: blur(5px);
+    z-index: -9999;
     width: 100%;
-    height: 45vh;
 }
 
 .presentation-text {
-    font-size: 2.8rem;
+    font-size: 5.2rem;
     color: white;
     font-weight: bold;
-    text-shadow: 0px 0px 10px #031c09;
     border-radius: 10px;
     padding: 5px;
 }
@@ -135,6 +133,7 @@ nav a {
     align-items: center;
     padding: 100px 0;
     background-color: #f5f5f5;
+    cursor: auto;
 }
 
 .text-intro {
@@ -147,19 +146,42 @@ nav a {
 .services-box {
     padding: 10px;
     width: 400px;
+    height: 100%;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .15);
     background-color: white;
     font-size: 1rem;
+    color: white;
+    border-radius: 10px;
+    cursor: auto;
+}
+
+.services-box:nth-child(1) {
+    background: #010C0A;
+}
+
+.services-box:nth-child(2) {
+    background: #062D27;
+}
+
+.services-box:nth-child(3) {
+    background: #0C594E;
+}
+
+.services-box:nth-child(4) {
+    background: #128373;
 }
 
 /*====*/
 
 /*about section*/
 #about {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
+    background: white;
+    z-index: 1;
 }
 
 .details {
@@ -195,37 +217,74 @@ nav a {
 
 /*contact section*/
 #contact {
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #000 0%, #138575 100%);
     color: white;
 }
 
-.slider-show {
+/*contact infinit slider*/
+
+.slider-list {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* .scroller {
+    max-width: 600px;
+}
+
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
 }
 
-/* .slider-logo {
-    animation: scroll 5s linear infinite;
-} */
-
-.slider-track {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
+.scroller[data-animated="true"] {
     overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    background: #ffffff;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
 }
 
 @keyframes scroll {
-    from {
-        transform: translateX(0%);
-    }
-
     to {
-        transform: translateX(-100%);
+        transform: translate(calc(-50% - 0.5rem));
     }
-}
+} */
 
 #img-logo {
     border-radius: 5px;
@@ -317,7 +376,7 @@ nav a {
     background: url(./images/employee1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 300px;
+    width: 200px;
     height: 300px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -327,7 +386,7 @@ nav a {
     background: url(./images/chisti.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 300px;
+    width: 200px;
     height: 300px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -337,7 +396,7 @@ nav a {
     display: flex;
     flex-direction: column;
     border: 1px solid #e1dcdc;
-    width: 300px;
+    width: 200px;
     height: 300px;
     padding: 0px 0px 10px 0px;
     box-shadow: 0px 0px 9px 6px #0000000d;
@@ -355,19 +414,43 @@ nav a {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+@media (max-width: 600px) {
+    body {
+        display: inline-block;
+    }
+
+    .logo {
+        position: absolute;
+        left: 0;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+
+    #nav-menu {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        gap: 20px;
         align-items: center;
-        gap: 10px;
+        justify-content: flex-end;
     }
 
     #home {
         background-size: contain;
+        height: 30vh;
     }
 
     .presentation-text {
-        font-size: 2rem;
+        font-size: 0.1rem;
     }
 
     #about,
@@ -392,7 +475,7 @@ nav a {
 
     #services {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 30px;
     }
 
     .services-box {
@@ -409,14 +492,15 @@ nav a {
         align-items: center;
         background-color: #f5f5f5;
         justify-items: center;
+        height: 100vh;
     }
 
     .team-description {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         border: 1px solid #e1dcdc;
-        width: 100px;
-        height: 100px;
+        width: 300px;
+        height: 330px;
         border-radius: 10px;
         background-color: white;
         gap: 5px;
@@ -424,8 +508,38 @@ nav a {
 
     .logo-employee1,
     .logo-chisti {
-        width: 100px;
-        height: 100px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .scroll-button {
+        width: 25px;
+        height: 25px;
+        font-size: 1.4rem;
+        margin: 0px 30px;
+    }
+
+    .slider-logo img {
+        width: 50px !important;
+    }
+
+    .letter-logo-size {
+        color: #10a585;
+        font-size: 7.2rem;
+    }
+
+    #nav-translate {
+        padding: 0;
+        margin: 0;
+        right: 0;
+        top: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    #team {
+        gap: 20px;
+        height: 120vh;
     }
 }
 
