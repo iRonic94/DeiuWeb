@@ -255,6 +255,14 @@ nav a {
     gap: 20px;
 }
 
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-end;
+}
+
 /* .scroller {
     max-width: 600px;
 }
@@ -558,6 +566,10 @@ nav a {
 
     .words {
         display: none;
+    }
+
+    .employee-description {
+        padding: 0;
     }
 }
 
