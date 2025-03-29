@@ -552,6 +552,10 @@ nav a {
         width: 150px !important;
     }
 
+    .slider-logo:last-child img {
+        width: 100px !important;
+    }
+
     .letter-logo-size {
         color: #10a585;
         font-size: 7.2rem;
