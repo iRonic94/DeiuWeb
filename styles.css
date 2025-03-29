@@ -16,10 +16,6 @@ body {
     color: unset !important;
 }
 
-a.VIpgJd-ZVi9od-l4eHX-hSRGPd {
-    display: none !important;
-}
-
 #google_translate_element {
     display: none;
 }
@@ -28,15 +24,8 @@ a.VIpgJd-ZVi9od-l4eHX-hSRGPd {
     display: none !important;
 }
 
-#antiInspect {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0);
-    z-index: 99999;
-    pointer-events: none;
+font[style="vertical-align: inherit;"] {
+    all: unset !important;
 }
 
 /*====*/
