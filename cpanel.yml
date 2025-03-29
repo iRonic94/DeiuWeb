@@ -1,3 +1,4 @@
+---
 deployment:
   tasks:
     - export DEPLOY_PATH=/home/r129685zyra/public_html
