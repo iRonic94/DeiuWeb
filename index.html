@@ -33,6 +33,7 @@
             <div class="language-switch">
                 <img src="./flags/svg/ro.svg" alt="ro" onclick="changeLanguage('ro')" />
                 <img src="./flags/svg/en.svg" alt="en" onclick="changeLanguage('en')" />
+                <img src="./flags/svg/de.svg" alt="de" onclick="changeLanguage('de')" />
             </div>
             <div id="google_translate_element"></div>
             <!-- <img src="./images/en.jpg">
@@ -46,9 +47,9 @@
         <video autoplay loop muted playsinline width="600">
             <source src="images/bgWP.mp4" type="video/mp4">
         </video>
-        <div class="presentation-text"><span class="letter-logo-size">Z</span><span class="words">yraxes</span> <span
-                class="letter-logo-size">I</span><span class="words">ndustrial</span> <span
-                class="letter-logo-size">R</span><span class="words">obotics & </span><span
+        <div class="presentation-text" translate="no"><span class="letter-logo-size">Z</span><span
+                class="words">yraxes</span> <span class="letter-logo-size">I</span><span class="words">ndustrial</span>
+            <span class="letter-logo-size">R</span><span class="words">obotics & </span><span
                 class="letter-logo-size">A</span><span class="words">utomation</span></div>
     </section>
     <!-- Services section -->
@@ -240,7 +241,7 @@
     <script type="text/javascript">
         //google translate
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ro,en' }, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ro,en,de' }, 'google_translate_element');
         }
         function changeLanguage(lang) {
             var select = document.querySelector(".goog-te-combo");
