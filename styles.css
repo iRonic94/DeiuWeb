@@ -96,7 +96,6 @@ nav a {
     background-size: cover;
     width: 50px;
     height: 50px;
-    display: none;
 }
 
 #nav-translate {
@@ -250,6 +249,7 @@ nav a {
 
 .slider-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -541,7 +541,7 @@ nav a {
     }
 
     .slider-logo img {
-        width: 50px !important;
+        width: 150px !important;
     }
 
     .letter-logo-size {
