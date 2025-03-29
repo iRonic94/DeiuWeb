@@ -12,11 +12,15 @@
     <link href="./css/brands.css" rel="stylesheet" />
     <link href="./css/solid.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Zyraxes Robotics and Automation">
+    <meta name="keywords" content="zyraxes, robotics, automation">
+    <meta name="author" content="Zyraxes">
+    <meta name="google-site-verification" content="1mrHxy62-_OFh8jk6VmleKM64Gn3sBubkpYp2QH7cag" />
 </head>
 
 <body oncontextmenu="return false">
 
-
+    <div id="antiInspect"></div>
     <!-- Navigation Bar -->
 
     <nav>
@@ -28,6 +32,10 @@
 
         </ul>
         <ul id="nav-translate">
+            <div class="language-switch">
+                <img src="./flags/svg/ro.svg" alt="ro" onclick="changeLanguage('ro')" />
+                <img src="./flags/svg/en.svg" alt="en" onclick="changeLanguage('en')" />
+            </div>
             <div id="google_translate_element"></div>
             <!-- <img src="./images/en.jpg">
             <img src="./images/ro.jpg"> -->
@@ -40,9 +48,10 @@
         <video autoplay loop muted playsinline width="600">
             <source src="images/bgWP.mp4" type="video/mp4">
         </video>
-        <div class="presentation-text"><span class="letter-logo-size">Z</span>yraxes <span
-                class="letter-logo-size">I</span>ndustrial <span class="letter-logo-size">R</span>obotics & <span
-                class="letter-logo-size">A</span>utomation</div>
+        <div class="presentation-text"><span class="letter-logo-size">Z</span><span class="words">yraxes</span> <span
+                class="letter-logo-size">I</span><span class="words">ndustrial</span> <span
+                class="letter-logo-size">R</span><span class="words">obotics & </span><span
+                class="letter-logo-size">A</span><span class="words">utomation</span></div>
     </section>
     <!-- Services section -->
     <div id="gt-mordadam-43217984"></div>
@@ -97,28 +106,32 @@
         </div>
         <div class="text-description">
             <h1>We Provide Professional Services.</h1>
-            <p></p>At Z.I.R.A., we provide expert programming and engineering solutions for
-            industrial automation. Our team specializes in industrial robot programming, PLC programming, and advanced
-            system simulations, ensuring seamless integration and optimization across various industries.<br><br>
-            We work with all types of robots, with extensive experience in <b style="color:#005D0A;">Yaskawa, ABB,
-                Fanuc, Mitsubishi, Omron,
-                and
-                Universal Robots (UR)</b>. Additionally, our PLC expertise includes <b style="color:#005D0A;">Siemens,
-                Schneider, and
-                Proface</b>, but we are
-            always eager to work with, learn, and adapt to different types of PLCs to meet the unique needs of our
-            clients.<br><br>
-            To ensure smooth operation and support, we also offer reliable remote call assistance, helping businesses
-            troubleshoot and optimize their automation systems efficiently. Moreover, we provide <b
-                style="color:#005D0A;">on-site
-                programming</b> and
-            <b style="color:#005D0A;">debugging</b> for real-time system adjustments, as well as <b
-                style="color:#005D0A;">offline
-                programming</b> to develop and test
-            automation
-            solutions before deployment.<br><br>
-            At Z.I.R.A., we are committed to delivering flexible, precise, and cutting-edge automation solutions that
-            drive industrial success.
+            <p>At Z.I.R.A., we provide expert programming and engineering solutions for
+                industrial automation. Our team specializes in industrial robot programming, PLC programming, and
+                advanced
+                system simulations, ensuring seamless integration and optimization across various industries.<br><br>
+                We work with all types of robots, with extensive experience in <b style="color:#005D0A;">Yaskawa, ABB,
+                    Fanuc, Mitsubishi, Omron,
+                    and
+                    Universal Robots (UR)</b>. Additionally, our PLC expertise includes <b
+                    style="color:#005D0A;">Siemens,
+                    Schneider, and
+                    Proface</b>, but we are
+                always eager to work with, learn, and adapt to different types of PLCs to meet the unique needs of our
+                clients.<br><br>
+                To ensure smooth operation and support, we also offer reliable remote call assistance, helping
+                businesses
+                troubleshoot and optimize their automation systems efficiently. Moreover, we provide <b
+                    style="color:#005D0A;">on-site
+                    programming</b> and
+                <b style="color:#005D0A;">debugging</b> for real-time system adjustments, as well as <b
+                    style="color:#005D0A;">offline
+                    programming</b> to develop and test
+                automation
+                solutions before deployment.<br><br>
+                At Z.I.R.A., we are committed to delivering flexible, precise, and cutting-edge automation solutions
+                that
+                drive industrial success.
             </p>
         </div>
     </section>
@@ -230,6 +243,13 @@
         //google translate
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ro,en' }, 'google_translate_element');
+        }
+        function changeLanguage(lang) {
+            var select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event('change'));
+            }
         }
     </script>
     <script type="text/javascript"

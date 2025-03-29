@@ -20,6 +20,25 @@ a.VIpgJd-ZVi9od-l4eHX-hSRGPd {
     display: none !important;
 }
 
+#google_translate_element {
+    display: none;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+#antiInspect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0);
+    z-index: 99999;
+    pointer-events: none;
+}
+
 /*====*/
 
 /*other elements*/
@@ -104,8 +123,8 @@ nav a {
 #nav-translate img {
     width: 30px;
     height: 30px;
-    border-radius: 50%;
     cursor: pointer;
+    padding: 5px;
 }
 
 /*====*/
@@ -546,6 +565,10 @@ nav a {
         margin: 0;
         right: 0;
         top: 5px;
+    }
+
+    .words {
+        display: none;
     }
 }
 

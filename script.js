@@ -74,7 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-
+    //clear cookies
+    document.cookie.split(";").forEach(function (cookie) {
+        document.cookie = cookie
+            .replace(/^ +/, "")
+            .replace(/=.*/, "=;expires=" + new Date(0).toUTCString() + ";path=/");
+    });
     //call the functions
     navigation();
     windowScroll();
