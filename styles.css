@@ -487,11 +487,10 @@ nav a {
     }
 
     #nav-menu {
-        display: flex;
-        list-style: none;
-        flex-direction: row;
+        display: grid;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
+        margin-left: 20px;
     }
 
     #home {
